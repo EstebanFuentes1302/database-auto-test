@@ -6,7 +6,7 @@ Script that can be called by a .bat file for daily testing databases listed in a
 
 
 
-## Test de Bases de Datos
+## Database Testing
 
 Path where the logic and database testing is located:
 
@@ -15,7 +15,7 @@ Path where the logic and database testing is located:
 ```
 
 Data is called by a .csv file in the data folder (as listed in source code)
-## Batch de ejecución
+## Execution Batch File
 
 Bash file that can be called by the Windows Task Scheduler or another alternative.
 
