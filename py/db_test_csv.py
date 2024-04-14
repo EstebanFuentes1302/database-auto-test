@@ -7,9 +7,8 @@ con_list = []
 now = datetime.datetime.now().strftime("%Y-%m-%d %H.%M.%S")
 
 logpathname = f"C:\env\DB_TEST\logs\DB_TEST_{now}.log"
-#logging.basicConfig(filename = logpathname, filemode='w', format = "[%(asctime)s]%(message)s")
 
-#FORMATO DE PINTADO DE LOGS
+#FORMATO Y CONFIGURACIÓN DE PINTADO DE LOGS
 formatter = logging.Formatter("[%(asctime)s]%(message)s", "%Y-%m-%d %H.%M.%S")
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
@@ -32,7 +31,7 @@ def testDatabase(DB_NAME, DB_USER, DB_PASS, DB_HOST, DB_PORT):
                 connectmsg = f"SE PUDO CONECTAR CORRECTAMENTE A LA BASE DE DATOS: {DB_NAME}"
                 logger.info(connectmsg)
     except Exception as ex:
-        con_list.append([DB_NAME, False])
+        con_list.append([DB_NAME, False, ex])
         errormsg = f"NO SE PUDO CONECTAR A LA BASE DE DATOS: {DB_NAME}\n\t{ex}"
         logger.error(errormsg)
     
@@ -47,6 +46,9 @@ with open(csvdatapath, newline='') as csvfile:
 resumee_log = f"RESUMEN DE PRUEBAS DE BASE DE DATOS:\n"
 
 for elem in con_list:
-    resumee_log += f"\t[Conexión a {elem[0]}] {elem[1]}\n"
+    if (len(elem) == 3):
+        resumee_log += f"\t[Conexión a {elem[0]}] {elem[1]} ({elem[2]})\n"
+    else:
+        resumee_log += f"\t[Conexión a {elem[0]}] {elem[1]}\n"
 
 logger.debug(resumee_log)

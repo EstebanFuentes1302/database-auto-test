@@ -1,0 +1,9 @@
+[2024-04-14 12.10.04]INTENTANDO CONEXIÓN A BASE DE DATOS: XbnE
+[2024-04-14 12.10.05]NO SE PUDO CONECTAR A LA BASE DE DATOS: XbnE
+	ORA-12514: TNS:el listener no conoce actualmente el servicio solicitado en el descriptor de conexión
+[2024-04-14 12.10.05]INTENTANDO CONEXIÓN A BASE DE DATOS: XE
+[2024-04-14 12.10.05]SE PUDO CONECTAR CORRECTAMENTE A LA BASE DE DATOS: XE
+[2024-04-14 12.10.05]RESUMEN DE PRUEBAS DE BASE DE DATOS:
+	[Conexión a XbnE] False - ORA-12514: TNS:el listener no conoce actualmente el servicio solicitado en el descriptor de conexión
+	[Conexión a XE] True
+
