@@ -35,7 +35,7 @@ def testDatabase(DB_NAME, DB_USER, DB_PASS, DB_HOST, DB_PORT):
         errormsg = f"NO SE PUDO CONECTAR A LA BASE DE DATOS: {DB_NAME}\n\t{ex}"
         logger.error(errormsg)
     
-
+#FUNCIÓN DE LECTURA DE DATOS DE CSV
 csvdatapath = 'C:\env\DB_TEST\data\databaseinfo.csv'
 with open(csvdatapath, newline='') as csvfile:
     csvreader = csv.reader(csvfile)
