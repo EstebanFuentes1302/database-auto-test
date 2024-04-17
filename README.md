@@ -17,7 +17,7 @@ Path where the logic and database testing is located:
 Data is called by a .csv file in the data folder (as listed in source code)
 ## Execution Batch File
 
-Bash file that can be called by the Windows Task Scheduler or another alternative.
+Bash file that can be called by the Windows Task Scheduler or another alternative (depending of SO).
 
 ```bash
   scripts\run_db_test.bat
