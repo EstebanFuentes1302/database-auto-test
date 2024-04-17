@@ -4,3 +4,4 @@ Include/
 Lib/
 logs/
 scripts/
+pyvenv.cfg
