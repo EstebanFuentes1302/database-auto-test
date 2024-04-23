@@ -2,6 +2,7 @@ import cx_Oracle
 import datetime
 import logging
 import csv
+import sys
 
 con_list = []
 now = datetime.datetime.now().strftime("%Y-%m-%d %H.%M.%S")
@@ -52,3 +53,5 @@ for elem in con_list:
         resumee_log += f"\t[Conexión a {elem[0]}] {elem[1]}\n"
 
 logger.debug(resumee_log)
+
+sys.exit()
