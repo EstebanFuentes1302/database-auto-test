@@ -18,7 +18,7 @@ logger.addHandler(file_handler)
 
 #FUNCION DE CONEXION A BASE DE DATOS
 def testDatabase(DB_NAME, DB_USER, DB_PASS, DB_HOST, DB_PORT):
-    logger.debug(f"INTENTANDO CONEXIÓN A BASE DE DATOS: {DB_NAME}")
+    logger.debug(f"[{DB_NAME}] Intentando conectar a base de datos {DB_NAME}")
     try:
         with cx_Oracle.connect(
             user = DB_USER,
@@ -28,11 +28,11 @@ def testDatabase(DB_NAME, DB_USER, DB_PASS, DB_HOST, DB_PORT):
         ) as connection:
             if(connection):
                 con_list.append([DB_NAME, True])
-                connectmsg = f"SE PUDO CONECTAR CORRECTAMENTE A LA BASE DE DATOS: {DB_NAME}"
+                connectmsg = f"[{DB_NAME}] Se pudo conectar a la base de datos {DB_NAME}"
                 logger.info(connectmsg)
     except Exception as ex:
         con_list.append([DB_NAME, False, ex])
-        errormsg = f"NO SE PUDO CONECTAR A LA BASE DE DATOS: {DB_NAME}\n\t{ex}"
+        errormsg = f"[{DB_NAME}] No se pudo conectar a la base de datos: {DB_NAME}\n\t{ex}"
         logger.error(errormsg)
     
 #FUNCIÓN DE LECTURA DE DATOS DE ARCHIVOS CSV
