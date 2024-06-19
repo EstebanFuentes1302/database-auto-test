@@ -5,3 +5,4 @@ Lib/
 logs/
 scripts/
 pyvenv.cfg
+.env
