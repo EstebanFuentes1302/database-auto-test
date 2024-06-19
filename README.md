@@ -20,7 +20,7 @@ Data is called by a .csv file in the data folder (as listed in source code)
 Bash file that can be called by the Windows Task Scheduler or another alternative (depending of SO).
 
 ```bash
-  scripts\run_db_test.bat
+  exe\run_db_test.bat
 ```
     
 ## Data CSV File
