@@ -1,6 +1,7 @@
 
 # Database Automatic Test Script
-Script that can be called by a .bat file for daily testing databases listed in a .csv file
+Script that can be called by a .bat file for daily testing databases listed in a .csv file.
+(Update) Now the script sends email with the not working databases, in this case using an API call.
 
 
 
